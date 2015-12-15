@@ -8,12 +8,17 @@ export PS1="\[\e[1;33m\]\u \[\e[0;37m\]at \[\e[1;36m\]\h ⚡ \[\e[1;32m\]<\w>\[\
 alias l='ls -lh --color=auto'
 alias ls='ls -h --color=auto'
 alias ll='ls -alh --color=auto'
+alias la='ls -ah --color=auto'
 alias ..='cd ..'
 alias ...='cd -'
 alias dh='du -h --max-depth=1'
 alias grep='grep --color=auto'
 alias vi='vim'
-eval "$(thefuck --alias)"
+
+if [ -n "pacman -Qs thefuck" ]; then 
+    eval "$(thefuck --alias)"
+fi
+
 
 #editor
 export EDITOR="vim"
