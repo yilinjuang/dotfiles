@@ -12,6 +12,7 @@ alias la='ls -ah --color=auto'
 alias ..='cd ..'
 alias ...='cd -'
 alias dh='du -h --max-depth=1'
+alias df='df -h'
 alias grep='grep --color=auto'
 alias vi='vim'
 
@@ -38,6 +39,6 @@ unset SSH_ASKPASS
 # sudo 
 complete -cf sudo
 # git
-if [ -f ~/.confJuang/git-completion.bash ]; then
-      . ~/.confJuang/git-completion.bash
+if [ -f ~/.confJuang/git-completion.sh ]; then
+    . ~/.confJuang/git-completion.sh
 fi
