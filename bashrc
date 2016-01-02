@@ -20,11 +20,13 @@ if [ -n "pacman -Qs thefuck" ]; then
     eval "$(thefuck --alias)"
 fi
 
-
-#editor
+# editor
 export EDITOR="vim"
 
-#IM
+# Android SDK
+export ANDROID_HOME=/opt/android-sdk
+
+# IM
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
