@@ -1,6 +1,7 @@
 # confJuang
 Juang's configurations
 
+
 ## Environment
 - Arch Linux
 
@@ -8,6 +9,8 @@ Juang's configurations
 ## Dependency
 - Bash
 - Git
+- Tmux
+
 
 ### Optional
 - [thefuck](https://github.com/nvbn/thefuck)
@@ -18,7 +21,7 @@ Juang's configurations
 ### Completion
 - git-completion
 - completion-ignore-case
-- sudo completio
+- sudo completion
 
 ### Misc
 - git-prompt
