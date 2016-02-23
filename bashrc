@@ -17,10 +17,6 @@ alias df='df -h'
 alias grep='grep --color=auto'
 alias vi='vim'
 
-if [ -n "pacman -Qs thefuck" ]; then 
-    eval "$(thefuck --alias)"
-fi
-
 # bash history ignore duplicates
 export HISTCONTROL=ignoredups
 
