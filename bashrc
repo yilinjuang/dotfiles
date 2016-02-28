@@ -44,9 +44,3 @@ export ANDROID_HOME=/opt/android-sdk
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
-
-# fix
-. /etc/profile.d/vte.sh
-
-# disable gnome-ssh-askpass dialogue
-unset SSH_ASKPASS
