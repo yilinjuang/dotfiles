@@ -6,10 +6,11 @@
 export PS1="\[\e[1;33m\]\u \[\e[0;37m\]at \[\e[1;36m\]\h ⚡ \[\e[1;32m\]<\w>\[\e[1;34m\]\$(__git_ps1)\n➜ \[\e[0m\]"
 
 #alias
-alias l='ls -lh --color=auto'
-alias ls='ls -h --color=auto'
-alias ll='ls -alh --color=auto'
-alias la='ls -ah --color=auto'
+LS_OPT='--color=auto --quoting-style=literal'
+alias l='ls -lh $LS_OPT'
+alias ls='ls -h $LS_OPT'
+alias ll='ls -alh $LS_OPT'
+alias la='ls -ah $LS_OPT'
 alias ..='cd ..'
 alias ...='cd -'
 alias dh='du -h --max-depth=1'
@@ -44,3 +45,6 @@ export ANDROID_HOME=/opt/android-sdk
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
+
+# Fix keep track of directory in new tab
+. /etc/profile.d/vte.sh
