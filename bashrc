@@ -21,8 +21,9 @@ alias vi='vim'
 # bash history ignore duplicates
 export HISTCONTROL=ignoredups
 
-# sudo completion
+# bash completion
 complete -cf sudo
+complete -d cd
 # git completion
 if [ -f ~/.confJuang/git-completion.sh ]; then
     . ~/.confJuang/git-completion.sh
