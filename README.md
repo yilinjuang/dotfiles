@@ -3,17 +3,13 @@ Juang's configurations
 
 
 ## Environment
-- Arch Linux
+- macOS
 
 
 ## Dependency
 - Bash
 - Git
 - Tmux
-
-
-### Optional
-- [thefuck](https://github.com/nvbn/thefuck)
 
 
 ## Features
