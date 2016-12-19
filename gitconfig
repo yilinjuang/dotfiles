@@ -5,8 +5,9 @@
 	ci = commit
 	st = status
 	br = branch
-    pl = pull
-    ps = push
+	pl = pull
+	ps = push
+	di = diff --color-words
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	type = cat-file -t
 	dump = cat-file -p
