@@ -10,6 +10,7 @@ Juang's configurations
 - Bash
 - Git
 - Tmux
+- coreutils: more accurate in command elasped time.
 
 
 ## Features
@@ -22,3 +23,4 @@ Juang's configurations
 ### Misc
 - git-prompt
 - ignore bash history duplicates
+- accurate command elapsed time
