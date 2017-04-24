@@ -26,3 +26,4 @@ Juang's configurations
 ### Misc
 - git-prompt
 - ignore bash history duplicates
+- accurate command elapsed time
