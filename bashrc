@@ -3,7 +3,7 @@
 ###################
 
 # prompt
-export PS1="\[\e[1;33m\]\u \[\e[0;37m\]at \[\e[1;36m\]\h ⚡ \[\e[1;32m\]<\w>\[\e[1;34m\]\$(__git_ps1)\[\e[0m\]\[\e[0;35m\] \${timer_show}\n➜ \[\e[0m\]"
+export PS1="\[\e[1;33m\]\u\[\e[0m\] \[\e[0;37m\]at\[\e[0m\] \[\e[1;36m\]\h\[\e[0m\] \[\e[0;37m\]⚡\[\e[0m\] \[\e[1;32m\]<\w>\[\e[0m\]\[\e[1;34m\]\$(__git_ps1)\[\e[0m\] \[\e[0;35m\]\${timer_show}\[\e[0m\]\n"
 
 # Last command elapsed time.
 function timer_now {
