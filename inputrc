@@ -16,3 +16,7 @@ set show-all-if-unmodified On
 set skip-completed-text On  # Avoid duplicated completion. Ex. Makefilefile.
 Tab: menu-complete
 "\e[Z": menu-complete-backward
+
+# History.
+"\e[A": history-search-backward
+"\e[B": history-search-forward
