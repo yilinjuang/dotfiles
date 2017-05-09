@@ -3,11 +3,7 @@
 echo "source ~/.confJuang/bashrc" > ~/.bashrc
 echo "source ~/.confJuang/tmux.conf" > ~/.tmux.conf
 echo "\$include ~/.confJuang/inputrc" > ~/.inputrc
-
-# gdb-peda
-echo "Installing GDB peda..."
-git clone https://github.com/longld/peda.git ~/.confJuang/peda
-echo "source ~/.confJuang/peda/peda.py" > ~/.gdbinit
+echo "source ~/.confJuang/peda/peda.py" > ~/.gdbinit    # gdb-peda
 
 # gitconfig
 echo "Following are Git settings: "
