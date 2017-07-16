@@ -3,6 +3,7 @@
 echo "source ~/.confJuang/bashrc" > ~/.bashrc
 echo "source ~/.confJuang/tmux.conf" > ~/.tmux.conf
 echo "\$include ~/.confJuang/inputrc" > ~/.inputrc
+echo "module.exports = {'extends': '$HOME/.confJuang/eslintrc.js'}" > ~/.eslintrc.js
 
 # gitconfig
 echo "Following are Git settings: "
@@ -18,4 +19,3 @@ EOM
 
 echo "ConfJuang Installed Successfully! Enjoy~"
 echo "Any problem please contact Yi-Lin Juang (frankyjuang@gmail.com)"
-
