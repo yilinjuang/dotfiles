@@ -11,6 +11,7 @@ My (Juang, Yi-Lin's) configurations.
 - Git
 - Tmux
 - coreutils: more accurate in command elasped time.
+- (Optional) [bash-completion](https://github.com/scop/bash-completion): bash completion for macOS. Install via brew (`brew install bash-completion@2`).
 - (Optional) [ESLint](http://eslint.org/): The pluggable linting utility for JavaScript and JSX. Bound with [eslintrc.js](eslintrc.js)
 - (Optional) [eslint-config-google](https://github.com/google/eslint-config-google): ESLint shareable config for the Google JavaScript style guide. Used by [eslintrc.js](eslintrc.js)
 

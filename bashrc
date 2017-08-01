@@ -52,8 +52,9 @@ alias vi='vim'
 export HISTCONTROL=ignoredups
 
 # bash completion
-complete -cf sudo
-complete -d cd
+if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
+    . $(brew --prefix)/share/bash-completion/bash_completion
+fi
 # git completion
 if [ -f ~/.confJuang/git-completion.sh ]; then
     . ~/.confJuang/git-completion.sh
