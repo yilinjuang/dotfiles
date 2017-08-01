@@ -6,22 +6,29 @@ My (Juang, Yi-Lin's) configurations.
 - macOS
 
 
-## Dependency
+## Dependencies
 - Bash
 - Git
 - Tmux
 - coreutils: more accurate in command elasped time.
-- (Optional) [bash-completion](https://github.com/scop/bash-completion): bash completion for macOS. Install via brew (`brew install bash-completion@2`).
-- (Optional) [ESLint](http://eslint.org/): The pluggable linting utility for JavaScript and JSX. Bound with [eslintrc.js](eslintrc.js)
-- (Optional) [eslint-config-google](https://github.com/google/eslint-config-google): ESLint shareable config for the Google JavaScript style guide. Used by [eslintrc.js](eslintrc.js)
+
+## Optional dependencies
+### Completion
+- bash-completion: bash completion. Install via brew (`brew install bash-completion@2`).
+- docker-completion: docker completion. Install via brew (`brew install docker-completion`).
+- pip-completion: pip completion. Install via brew (`brew install pip-completion`).
+### Lint
+- [ESLint](http://eslint.org/): The pluggable linting utility for JavaScript and JSX. Bound with [eslintrc.js](eslintrc.js)
+- [eslint-config-google](https://github.com/google/eslint-config-google): ESLint shareable config for the Google JavaScript style guide. Used by [eslintrc.js](eslintrc.js)
 
 
 ## Features
 
 ### Completion
-- git-completion
-- completion-ignore-case
-- sudo completion
+- bash
+- docker
+- git
+- tmux
 
 ### Lint
 - javascript lint
