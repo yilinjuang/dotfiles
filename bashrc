@@ -3,7 +3,20 @@
 ###################
 
 # prompt
-export PS1="\[\e[1;33m\]\u\[\e[0m\] \[\e[0;37m\]at\[\e[0m\] \[\e[1;36m\]\h\[\e[0m\] \[\e[0;37m\]⚡\[\e[0m\] \[\e[1;32m\]<\w>\[\e[0m\]\[\e[1;34m\]\$(__git_ps1)\[\e[0m\] \[\e[0;35m\]\${timer_show}\[\e[0m\]\n"
+major=${BASH_VERSINFO[0]}
+minor=${BASH_VERSINFO[1]}
+if [ $major -lt 4 ]; then
+    PS1_suffix="$ "
+elif [ $major -eq 4 ] && [ $minor -lt 4 ]; then
+    PS1_suffix="$ "
+else
+    # Requires Bash version >= 4.4
+    PS1_suffix=
+    bind 'set show-mode-in-prompt On'
+    bind 'set vi-ins-mode-string "\1\e[1;32m\2Ｖ》\1\e[0m\2"'
+    bind 'set vi-cmd-mode-string "\1\e[1;34m\2Ｎ》\1\e[0m\2"'
+fi
+export PS1="\[\e[1;33m\]\u\[\e[0m\] \[\e[0;37m\]at\[\e[0m\] \[\e[1;36m\]\h\[\e[0m\] \[\e[0;37m\]⚡\[\e[0m\] \[\e[1;32m\]<\w>\[\e[0m\]\[\e[1;34m\]\$(__git_ps1)\[\e[0m\] \[\e[0;35m\]\${timer_show}\[\e[0m\]\n$PS1_suffix"
 
 # Last command elapsed time.
 function timer_now {
@@ -64,18 +77,3 @@ source ~/.confJuang/git-prompt.sh
 
 # editor
 export EDITOR="vim"
-
-##################
-#     Custom     #
-##################
-
-# Android SDK
-export ANDROID_HOME=/opt/android-sdk
-
-# IM
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
-
-# Fix keep track of directory in new tab
-. /etc/profile.d/vte.sh
