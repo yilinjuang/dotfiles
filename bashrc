@@ -64,9 +64,15 @@ alias vi='vim'
 # bash history ignore duplicates
 export HISTCONTROL=ignoredups
 
-# bash completion
-complete -cf sudo
-complete -d cd
+# bash completion (default for ubuntu)
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
 # git completion
 if [ -f ~/.confJuang/git-completion.sh ]; then
     . ~/.confJuang/git-completion.sh
