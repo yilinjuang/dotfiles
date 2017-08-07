@@ -1,5 +1,9 @@
 # Set editing mode to VIM god.
 set editing-mode vi
+set keymap vi-command
+Control-l: clear-screen
+set keymap vi-insert
+Control-l: clear-screen
 
 # Completion.
 set colored-stats On	# Indicate filetype with colors when completion.
