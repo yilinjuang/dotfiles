@@ -3,18 +3,24 @@ module.exports = {
         'browser': true,
         'es6': true,
         'node': true,
+        "webextensions": true,
     },
-    // 'extends': ['eslint:recommended'],  // Use default rules.
-    'extends': ['eslint:recommended', 'google'],  // Use Google coding styles.
+    'extends': ['eslint:recommended'],  // Use default rules.
+    // 'extends': ['eslint:recommended', 'google'],  // Use Google coding styles.
     'parserOptions': {
-        'ecmaFeatures': {
-            'impliedStrict': true,
-        },
+        "ecmaVersion": 2017,
         'sourceType': 'module',
     },
     'rules': {
+        "indent": [
+            "error",
+            4
+        ],
         'no-console': 'off',
         'require-jsdoc': 'off',
-        // 'indent': ['error', 2]  // Set indent to 2 spaces.
+        "semi": [
+            "error",
+            "always",
+        ],
     },
 }
