@@ -47,6 +47,7 @@ alias dh='du -h -d 1'
 alias df='df -h'
 alias grep='grep --color=auto'
 alias vi='vim'
+alias c='pbcopy' # Easy for piping cli result to clipboard. Ex. fzf | c
 
 # bash history ignore duplicates
 export HISTCONTROL=ignoredups
