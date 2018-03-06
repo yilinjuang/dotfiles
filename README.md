@@ -20,6 +20,7 @@ My (Juang, Yi-Lin's) configurations.
 ### Lint
 - [ESLint](http://eslint.org/): The pluggable linting utility for JavaScript and JSX. Bound with [eslintrc.js](eslintrc.js)
 - [eslint-config-google](https://github.com/google/eslint-config-google): ESLint shareable config for the Google JavaScript style guide. Used by [eslintrc.js](eslintrc.js)
+- [eslint-plugin-html](https://github.com/BenoitZugmeyer/eslint-plugin-html): An ESLint plugin to extract and lint scripts from HTML files. Used by [eslintrc.js](eslintrc.js)
 
 
 ## Features

@@ -1,26 +1,34 @@
 module.exports = {
-    'env': {
-        'browser': true,
-        'es6': true,
-        'node': true,
-        "webextensions": true,
+    "env": {
+        "browser": true,
+        "es6": true,
+        // "node": true,
+        // "webextensions": true,
     },
-    'extends': ['eslint:recommended'],  // Use default rules.
-    // 'extends': ['eslint:recommended', 'google'],  // Use Google coding styles.
-    'parserOptions': {
+    "extends": ["eslint:recommended", "google"],
+    "parserOptions": {
         "ecmaVersion": 2017,
-        'sourceType': 'module',
+        "sourceType": "module",
     },
-    'rules': {
+    "plugins": ["html"],
+    "rules": {
         "indent": [
             "error",
-            4
+            4,
         ],
-        'no-console': 'off',
-        'require-jsdoc': 'off',
+        "linebreak-style": [
+            "error",
+            "unix",
+        ],
+        "no-console": "off",
+        "require-jsdoc": "off",
+        "quotes": [
+            "error",
+            "double",
+        ],
         "semi": [
             "error",
             "always",
         ],
     },
-}
+};
