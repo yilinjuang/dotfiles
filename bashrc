@@ -62,7 +62,12 @@ reload_history() {
     history -r
 }
 
-export PROMPT_COMMAND="reload_history; timer_stop; exit_code;"
+bashrc_sourced=$(stat -c %Y ~/.confJuang/bashrc)
+reload_bashrc() {
+    test $(stat -c %Y ~/.confJuang/bashrc) -ne $bashrc_sourced && source ~/.bashrc
+}
+
+export PROMPT_COMMAND="reload_bashrc; reload_history; timer_stop; exit_code;"
 
 # alias
 LS_OPT='--color=auto --quoting-style=literal'
@@ -77,7 +82,10 @@ alias grep='grep --color=auto'
 alias vi='vim'
 
 # bash history
-export HISTCONTROL=ignoredups:erasedups
+export HISTFILESIZE=
+export HISTSIZE=
+export HISTFILE=~/.bash_eternal_history
+export HISTCONTROL=ignoreboth:erasedups
 shopt -s histappend
 
 # bash completion (default for ubuntu)
