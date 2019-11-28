@@ -3,7 +3,7 @@
 ###################
 
 # prompt
-export PS1="\[\e[1;33m\]\u\[\e[0m\] \[\e[0;37m\]at\[\e[0m\] \[\e[1;36m\]\h\[\e[0m\] \[\e[0;37m\]⚡\[\e[0m\] \[\e[1;32m\]<\w>\[\e[0m\]\[\e[1;34m\]\$(__git_ps1)\[\e[0m\] \[\e[0;35m\]\${timer_show}\[\e[0m\]\n"
+PS1="\[\e[1;33m\]\u\[\e[0m\] \[\e[0;37m\]at\[\e[0m\] \[\e[1;36m\]\h\[\e[0m\] \[\e[0;37m\]⚡\[\e[0m\] \[\e[1;32m\]<\w>\[\e[0m\]\[\e[1;34m\]\$(__git_ps1)\[\e[0m\] \[\e[0;35m\]\${timer_show}\[\e[0m\]\n"
 
 # Last command elapsed time.
 function timer_now {
@@ -47,11 +47,15 @@ alias dh='du -h -d 1'
 alias df='df -h'
 alias grep='grep --color=auto'
 alias vi='vim'
-alias c='tee >(pbcopy)' # Easy for piping cli result to clipboard. Ex. cat | c
 alias fzf='fzf -m --preview="cat {}" | c'
 
-# bash history ignore duplicates
-export HISTCONTROL=ignoredups
+# unlimited history size
+HISTFILESIZE=
+HISTSIZE=
+# https://unix.stackexchange.com/a/18443/298028
+HISTCONTROL=ignoreboth:erasedups
+shopt -s histappend
+PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
 
 # bash completion
 if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
@@ -66,4 +70,4 @@ fi
 source ~/.confJuang/git-prompt.sh
 
 # editor
-export EDITOR="vim"
+EDITOR="vim"
