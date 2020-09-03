@@ -15,6 +15,7 @@ My (Juang, Yi-Lin's) configurations.
 - bash completion: Install via brew (`brew install bash-completion@2`).
 - npm completion: `npm completion >> $(brew --prefix)/etc/bash_completion.d/`.
 - docker completion: Install via brew (`brew install docker-completion`).
+- docker-compose completion: Install via brew (`brew install docker-compose-completion`).
 - pip completion: Install via brew (`brew install pip-completion`).
 - fzf: Install via brew (`brew install fzf && $(brew --prefix)/opt/fzf/install`).
 - ag: Install via brew (`brew install the_silver_searcher`).
@@ -25,6 +26,7 @@ My (Juang, Yi-Lin's) configurations.
 - bash
 - npm
 - docker
+- docker-compose
 - pip
 - git
 - tmux
