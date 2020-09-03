@@ -58,16 +58,19 @@ shopt -s histappend
 PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
 
 # bash completion
-if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
-    . $(brew --prefix)/share/bash-completion/bash_completion
-fi
+[[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
+
 # git completion
-if [ -f ~/.confJuang/git-completion.sh ]; then
-    . ~/.confJuang/git-completion.sh
+# https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+if [ -f ~/.confJuang/git-completion.bash ]; then
+    . ~/.confJuang/git-completion.bash
 fi
 
 # import git-prompt.sh
 source ~/.confJuang/git-prompt.sh
+
+# fzf shortcut
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # editor
 EDITOR="vim"
