@@ -1,10 +1,13 @@
 # confJuang
+
 My (Juang, Yi-Lin's) configurations.
 
 ## Environment
+
 - macOS
 
 ## Dependencies
+
 - Bash >= 5
 - Git
 - Tmux
@@ -23,6 +26,7 @@ My (Juang, Yi-Lin's) configurations.
 ## Features
 
 ### Completion
+
 - bash
 - npm
 - docker
@@ -32,6 +36,7 @@ My (Juang, Yi-Lin's) configurations.
 - tmux
 
 ### Misc
+
 - fzf
 - ag
 - git-prompt

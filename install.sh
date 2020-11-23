@@ -1,15 +1,14 @@
 #!/bin/bash
 
-echo "source ~/.confJuang/bashrc" >> ~/.bashrc
-echo "source ~/.confJuang/tmux.conf" > ~/.tmux.conf
-echo "\$include ~/.confJuang/inputrc" > ~/.inputrc
-
+echo "source ~/.confJuang/bashrc" >>~/.bashrc
+echo "source ~/.confJuang/tmux.conf" >~/.tmux.conf
+echo "\$include ~/.confJuang/inputrc" >~/.inputrc
 
 # gitconfig
 echo "Following are Git settings: "
 read -p "What's your name? " name
 read -p "And your email? " email
-cat > ~/.gitconfig <<- EOM
+cat >~/.gitconfig <<-EOM
 [user]
     email = $email
     name = $name
@@ -18,4 +17,4 @@ cat > ~/.gitconfig <<- EOM
 EOM
 
 echo "ConfJuang Installed Successfully! Enjoy~"
-echo "Any problem please contact Yi-Lin Juang (frankyjuang at gmail dot com)"
+echo "If there are any problems please contact Yi-Lin (hi at yilinjuang dot com)"
