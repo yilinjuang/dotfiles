@@ -1,24 +1,33 @@
 [advice]
-	pushNonFastForward = false
-	statusHints = false
-	commitBeforeMerge = false
-	resolveConflict = false
-	implicitIdentity = false
-	detachedHead = false
+
+pushNonFastForward = false
+statusHints = false
+commitBeforeMerge = false
+resolveConflict = false
+implicitIdentity = false
+detachedHead = false
+
 [alias]
-	co = checkout
-	ci = commit
-	st = status
-	br = branch
-	pl = pull
-	ps = push
-	di = diff --color-words
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-	type = cat-file -t
-	dump = cat-file -p
+
+co = checkout
+ci = commit
+st = status
+br = branch
+pl = pull
+ps = push
+di = diff --color-words
+hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+type = cat-file -t
+dump = cat-file -p
+
 [core]
-	excludesfile = ~/.confJuang/gitignore
+
+excludesfile = ~/.dotfiles/gitignore
+
 [merge]
-	tool = vimdiff
+
+tool = vimdiff
+
 [push]
-	default = simple
+
+default = simple

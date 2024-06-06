@@ -1,6 +1,6 @@
-# confJuang
+# Dotfiles
 
-My (Juang, Yi-Lin's) configurations.
+My configurations.
 
 ## Environment
 
@@ -8,37 +8,60 @@ My (Juang, Yi-Lin's) configurations.
 
 ## Dependencies
 
-- Bash >= 5
+- Bash (>= 5)
 - Git
 - Tmux
-- coreutils: more accurate in command elasped time.
+- Starship
+- fzf (optional)
+- ag (optional)
+- z (optional)
 
-## Optional dependencies
+## Optional Dependencies
 
-- bash completion: Install via brew (`brew install bash-completion@2`).
-- npm completion: `npm completion >> $(brew --prefix)/etc/bash_completion.d/`.
-- docker completion: Install via brew (`brew install docker-completion`).
-- docker-compose completion: Install via brew (`brew install docker-compose-completion`).
-- pip completion: Install via brew (`brew install pip-completion`).
-- fzf: Install via brew (`brew install fzf && $(brew --prefix)/opt/fzf/install`).
-- ag: Install via brew (`brew install the_silver_searcher`).
+- **Bash Completion**: Install via Homebrew
+
+```shell
+brew install bash-completion@2
+```
+
+- **npm Completion**:
+
+```shell
+npm completion >> $(brew --prefix)/etc/bash_completion.d/
+```
+
+- **Docker Completion**: Install via Homebrew
+
+```shell
+brew install docker-completion
+```
+
+- **Docker Compose Completion**: Install via Homebrew
+
+```shell
+brew install docker-compose-completion
+```
+
+- **pip Completion**: Install via Homebrew
+
+```shell
+brew install pip-completion
+```
+
+- **fzf**: Install via Homebrew
+
+```shell
+brew install fzf && $(brew --prefix)/opt/fzf/install
+```
 
 ## Features
 
 ### Completion
 
-- bash
+- Bash
 - npm
-- docker
-- docker-compose
+- Docker
+- Docker Compose
 - pip
-- git
-- tmux
-
-### Misc
-
-- fzf
-- ag
-- git-prompt
-- ignore bash history duplicates
-- accurate command elapsed time
+- Git
+- Tmux

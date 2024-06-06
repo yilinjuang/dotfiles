@@ -1,26 +1,23 @@
-# Set editing mode to VIM god.
-set editing-mode vi
-set keymap vi-command
-Control-l: clear-screen
-set keymap vi-insert
-Control-l: clear-screen
-set show-mode-in-prompt On
-set vi-ins-mode-string "\1\e[1;32m\2Ｖ》\1\e[0m\2"
-set vi-cmd-mode-string "\1\e[1;34m\2Ｎ》\1\e[0m\2"
+# Enable 256-color support for more vivid colors
+set colored-stats On
 
-# Completion.
-set colored-stats On    # Indicate filetype with colors when completion.
+# Enhanced completion settings
 set completion-ignore-case On
-set completion-map-case On  # Dealt with hyphens and underscores.
+set completion-map-case On
 set mark-symlinked-directories On
 set match-hidden-files Off
 set menu-complete-display-prefix On
 set show-all-if-ambiguous On
 set show-all-if-unmodified On
-set skip-completed-text On  # Avoid duplicated completion. Ex. Makefilefile.
+set skip-completed-text On
+
+# Bindings for forward and backward menu completion
 Tab: menu-complete
 "\e[Z": menu-complete-backward
 
-# History.
+# Enable history search
 "\e[A": history-search-backward
 "\e[B": history-search-forward
+
+# Automatically add a trailing slash to directories during completion
+set mark-directories On

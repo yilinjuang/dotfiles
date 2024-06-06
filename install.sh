@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo "source ~/.confJuang/bashrc" >>~/.bashrc
-echo "source ~/.confJuang/tmux.conf" >~/.tmux.conf
-echo "\$include ~/.confJuang/inputrc" >~/.inputrc
+echo "source ~/.dotfiles/bashrc" >>~/.bashrc
+echo "source ~/.dotfiles/tmux.conf" >~/.tmux.conf
+echo "\$include ~/.dotfiles/inputrc" >~/.inputrc
 
 # gitconfig
 echo "Following are Git settings: "
@@ -13,8 +13,8 @@ cat >~/.gitconfig <<-EOM
     email = $email
     name = $name
 [include]
-    path = ~/.confJuang/gitconfig
+    path = ~/.dotfiles/gitconfig
 EOM
 
-echo "ConfJuang Installed Successfully! Enjoy~"
+echo "Dotfiles Installed Successfully! Enjoy~"
 echo "If there are any problems please contact Yi-Lin (hi at yilinjuang dot com)"
