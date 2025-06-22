@@ -7,7 +7,6 @@ alias l='ls -lhG'
 alias ls='ls -hG'
 alias ll='ls -alhG'
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
-alias fzf='fzf -m --preview="cat {}" | c'
 
 # Unlimited history size
 HISTFILESIZE=
@@ -25,8 +24,8 @@ if [ -f ~/.dotfiles/git-completion.bash ]; then
     . ~/.dotfiles/git-completion.bash
 fi
 
-# Fzf shortcut
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# Fzf
+FZF_DEFAULT_OPTS='-m --style full --preview "fzf-preview.sh {}"'
 
 # Editor
 EDITOR="vim"
