@@ -1,67 +1,61 @@
 # Dotfiles
 
-My configurations.
+Personal configuration files for macOS development environment.
 
-## Environment
+## What's included
+
+- **bashrc** - Shell configuration with aliases and history settings
+- **inputrc** - Readline configuration for vi-mode navigation
+- **tmux.conf** - Terminal multiplexer configuration with vim-style bindings
+- **starship.toml** - Command prompt configuration
+- **gitconfig** - Git settings and aliases
+- **gitignore** - Global git ignore patterns
+- **install.sh** - Setup script
+
+## Installation
+
+```bash
+git clone --recursive https://github.com/yilinjuang/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+./install.sh
+```
+
+Restart your terminal after installation.
+
+## Requirements
 
 - macOS
+- Bash 5.0+
+- tmux 3.0+
+- Starship prompt
+- Git 2.0+
 
-## Dependencies
+Install dependencies with Homebrew:
 
-- Bash (>= 5)
-- Git
-- Tmux
-- Starship
-- fzf (optional)
-- ag (optional)
-- z (optional)
-
-## Optional Dependencies
-
-- **Bash Completion**: Install via Homebrew
-
-```shell
-brew install bash-completion@2
+```bash
+brew install bash tmux starship
 ```
 
-- **npm Completion**:
+## Key bindings
 
-```shell
-npm completion >> $(brew --prefix)/etc/bash_completion.d/
-```
+### tmux (prefix: Ctrl+a)
 
-- **Docker Completion**: Install via Homebrew
+- `Ctrl+a s` - Session list
+- `Ctrl+a |` - Split horizontally
+- `Ctrl+a -` - Split vertically
+- `Ctrl+a h/j/k/l` - Navigate panes
+- `Ctrl+a Ctrl+s` - Save session
+- `Ctrl+a Ctrl+r` - Restore session
 
-```shell
-brew install docker-completion
-```
+### Git aliases
 
-- **Docker Compose Completion**: Install via Homebrew
+- `git st` - status
+- `git co` - checkout
+- `git ci` - commit
+- `git br` - branch with tracking info
+- `git di` - diff with color words
+- `git hist` - pretty commit history
 
-```shell
-brew install docker-compose-completion
-```
+## Customization
 
-- **pip Completion**: Install via Homebrew
-
-```shell
-brew install pip-completion
-```
-
-- **fzf**: Install via Homebrew
-
-```shell
-brew install fzf && $(brew --prefix)/opt/fzf/install
-```
-
-## Features
-
-### Completion
-
-- Bash
-- npm
-- Docker
-- Docker Compose
-- pip
-- Git
-- Tmux
+Edit the configuration files directly in `~/.dotfiles/` to customize settings.

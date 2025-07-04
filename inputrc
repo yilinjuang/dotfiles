@@ -1,23 +1,37 @@
-# Enable 256-color support for more vivid colors
-set colored-stats On
+# Readline Configuration
 
-# Enhanced completion settings
+# Completion behavior
+set colored-completion-prefix On
+set colored-stats On
 set completion-ignore-case On
 set completion-map-case On
+set completion-prefix-display-length 3
+set mark-directories On
 set mark-symlinked-directories On
 set match-hidden-files Off
 set menu-complete-display-prefix On
 set show-all-if-ambiguous On
 set show-all-if-unmodified On
 set skip-completed-text On
+set visible-stats On
 
-# Bindings for forward and backward menu completion
+set completion-query-items 200
+set page-completions Off
+set disable-completion Off
+
+# History behavior
+set history-preserve-point On
+set history-size 50000
+
+# General settings
+set enable-bracketed-paste On
+
+# Vi mode
+set editing-mode vi
+
+# Key bindings
+"\C-l": clear-screen
 Tab: menu-complete
 "\e[Z": menu-complete-backward
-
-# Enable history search
 "\e[A": history-search-backward
 "\e[B": history-search-forward
-
-# Automatically add a trailing slash to directories during completion
-set mark-directories On

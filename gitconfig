@@ -1,33 +1,93 @@
 [advice]
-
 pushNonFastForward = false
 statusHints = false
 commitBeforeMerge = false
 resolveConflict = false
 implicitIdentity = false
 detachedHead = false
+addIgnoredFile = false
+addEmptyPathspec = false
 
 [alias]
-
+# Shortcuts
 co = checkout
 ci = commit
 st = status
-br = branch
-pl = pull
-ps = push
+br = branch -vv
+
+# Pull/Push
+pl = pull --rebase
+ps = push --no-verify
+
+# Diff
 di = diff --color-words
-hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-type = cat-file -t
-dump = cat-file -p
+
+# Log
+hist = log --oneline --graph --pretty=format:'%C(auto)%h %ad %d %s'
 
 [core]
-
 excludesfile = ~/.dotfiles/gitignore
+editor = cursor --wait
+autocrlf = input
+safecrlf = warn
+trustctime = false
+precomposeunicode = false
+untrackedCache = true
+fsmonitor = true
+
+[credential]
+helper = osxkeychain
+
+[diff]
+tool = cursor
+algorithm = histogram
+colorMoved = default
+colorMovedWS = allow-indentation-change
+
+[difftool]
+prompt = false
+
+[difftool "cursor"]
+cmd = cursor --wait --diff $LOCAL $REMOTE
 
 [merge]
+tool = cursor
+conflictstyle = zdiff3
+autoStash = true
 
-tool = vimdiff
+[mergetool]
+prompt = false
+keepBackup = false
+
+[mergetool "cursor"]
+cmd = cursor --wait $MERGED
 
 [push]
+default = current
+autoSetupRemote = true
+followTags = true
 
-default = simple
+[pull]
+rebase = true
+ff = only
+
+[rebase]
+autoStash = true
+autoSquash = true
+
+[fetch]
+prune = true
+pruneTags = true
+
+[branch]
+autoSetupRebase = always
+sort = -committerdate
+
+[status]
+showUntrackedFiles = all
+submoduleSummary = true
+
+[log]
+abbrevCommit = true
+decorate = short
+date = relative

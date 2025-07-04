@@ -1,5 +1,9 @@
 # https://starship.rs/config/
 
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
 [aws]
 symbol = "  "
 disabled = true
@@ -21,6 +25,7 @@ symbol = " "
 
 [directory]
 read_only = " 󰌾"
+truncate_to_repo = true
 
 [docker_context]
 symbol = " "
@@ -169,11 +174,20 @@ symbol = " "
 [scala]
 symbol = " "
 
+[status]
+disabled = false
+
 [swift]
 symbol = " "
 
 [terraform]
 disabled = true
+
+[username]
+show_always = false
+
+[jobs]
+symbol = "✦"
 
 [zig]
 symbol = " "

@@ -1,4 +1,6 @@
-# Prompt configuration
+# Bash Configuration
+
+# Prompt
 eval "$(starship init bash)"
 export STARSHIP_CONFIG=~/.dotfiles/starship.toml
 
@@ -6,26 +8,27 @@ export STARSHIP_CONFIG=~/.dotfiles/starship.toml
 alias l='ls -lhG'
 alias ls='ls -hG'
 alias ll='ls -alhG'
-alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
+alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.DS_Store,node_modules}'
 
-# Unlimited history size
-HISTFILESIZE=
-HISTSIZE=
+# History
+HISTFILESIZE=50000
+HISTSIZE=50000
 HISTCONTROL=ignoreboth:erasedups
-HISTTIMEFORMAT="%F %T "
+HISTIGNORE="ls:ll:cd:pwd:bg:fg:history:clear"
+HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
 shopt -s histappend
-PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
+export PROMPT_COMMAND="history -a; history -r; $PROMPT_COMMAND"
 
-# Bash completion
-[[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
-
-# Git completion
+# Git completion (from https://github.com/git/git/blob/master/contrib/completion/git-completion.bash)
 if [ -f ~/.dotfiles/git-completion.bash ]; then
-    . ~/.dotfiles/git-completion.bash
+    source ~/.dotfiles/git-completion.bash
 fi
+
+# Shell enhancements
+shopt -s autocd cdspell dirspell globstar nocaseglob
 
 # Fzf
 FZF_DEFAULT_OPTS='-m --style full --preview "fzf-preview.sh {}"'
 
-# Editor
-EDITOR="vim"
+# Environment
+export EDITOR='vim'
