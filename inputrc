@@ -31,6 +31,7 @@ set editing-mode vi
 
 # Key bindings
 "\C-l": clear-screen
+"\C-w": backward-kill-word
 Tab: menu-complete
 "\e[Z": menu-complete-backward
 "\e[A": history-search-backward
