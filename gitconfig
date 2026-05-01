@@ -27,7 +27,7 @@ hist = log --oneline --graph --pretty=format:'%C(auto)%h %ad %d %s'
 
 [core]
 excludesfile = ~/.dotfiles/gitignore
-editor = cursor --wait
+editor = vim
 autocrlf = input
 safecrlf = warn
 trustctime = false
