@@ -1,8 +1,8 @@
 # Bash Configuration
 
 # Prompt
-eval "$(starship init bash)"
 export STARSHIP_CONFIG=~/.dotfiles/starship.toml
+eval "$(starship init bash)"
 
 # Aliases
 alias l='ls -lhG'
@@ -17,7 +17,10 @@ HISTCONTROL=ignoreboth:erasedups
 HISTIGNORE="ls:ll:cd:pwd:bg:fg:history:clear"
 HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
 shopt -s histappend
-export PROMPT_COMMAND="history -a; history -r; $PROMPT_COMMAND"
+# Sync history across tabs immediately: append this session's new entries,
+# then pull in entries appended by other sessions since last prompt.
+[[ "$PROMPT_COMMAND" == *"history -a; history -n"* ]] || \
+    export PROMPT_COMMAND="history -a; history -n${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
 
 # Git completion (from https://github.com/git/git/blob/master/contrib/completion/git-completion.bash)
 if [ -f ~/.dotfiles/git-completion.bash ]; then
@@ -29,6 +32,7 @@ shopt -s autocd cdspell dirspell globstar nocaseglob
 
 # Fzf
 FZF_DEFAULT_OPTS='-m --style full --preview "fzf-preview.sh {}"'
+eval "$(fzf --bash)"
 
 # Environment
 export EDITOR='vim'
