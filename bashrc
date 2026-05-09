@@ -32,6 +32,7 @@ shopt -s autocd cdspell dirspell globstar nocaseglob
 
 # Fzf
 FZF_DEFAULT_OPTS='-m --style full --preview "fzf-preview.sh {}"'
+FZF_CTRL_R_OPTS='--wrap --no-preview'
 eval "$(fzf --bash)"
 
 # Environment
