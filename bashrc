@@ -17,10 +17,13 @@ HISTCONTROL=ignoreboth:erasedups
 HISTIGNORE="ls:ll:cd:pwd:bg:fg:history:clear"
 HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
 shopt -s histappend
-# Keep typed history in a file tools/agents don't know about. NOT exported,
-# so subshells spawned by cursor-agent/claude/etc. fall back to bash's
-# default ~/.bash_history (a scratch file) and can't clobber this one.
+# Keep typed history in a file tools/agents don't know about. Bash inherits
+# HISTFILE as exported from somewhere up the chain, and a plain assignment
+# doesn't strip that flag — so explicitly un-export. Tools' bash subshells
+# then fall back to bash's compiled-in default ~/.bash_history (a scratch
+# file they can clobber freely) instead of inheriting ours.
 HISTFILE="$HOME/.bash_history_typed"
+export -n HISTFILE
 # Sync history across tabs immediately: append this session's new entries,
 # then pull in entries appended by other sessions since last prompt.
 [[ "$PROMPT_COMMAND" == *"history -a; history -n"* ]] || \
