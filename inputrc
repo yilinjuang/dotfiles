@@ -36,3 +36,7 @@ Tab: menu-complete
 "\e[Z": menu-complete-backward
 "\e[A": history-search-backward
 "\e[B": history-search-forward
+
+# Word movement: Option+Left/Right (sent as Meta-arrow through tmux)
+"\e[1;3D": backward-word
+"\e[1;3C": forward-word
